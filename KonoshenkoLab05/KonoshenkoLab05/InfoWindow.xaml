@@ -18,14 +18,14 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="0" Content="Modules" HorizontalAlignment="Center"></Label>
-        <DataGrid Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Modules, Mode=OneWay}">
+        <DataGrid Grid.Column="1" Grid.Row="1" Background="Gainsboro" AutoGenerateColumns="False" ItemsSource="{Binding Modules, Mode=OneWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" MaxWidth="350" IsReadOnly="True" Binding="{Binding ModuleName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="File Path" MaxWidth="390" IsReadOnly="True" Binding="{Binding FileName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Label Grid.Column="3" Grid.Row="0" Content="Threads" HorizontalAlignment="Center"></Label>
-        <DataGrid Grid.Column="3" Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Threads, Mode=OneWay}">
+        <DataGrid Grid.Column="3" Grid.Row="1"  Background="Gainsboro" AutoGenerateColumns="False" ItemsSource="{Binding Threads, Mode=OneWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" MinWidth="50" MaxWidth="300" IsReadOnly="True" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="State" MinWidth="70" MaxWidth="300" IsReadOnly="True" Binding="{Binding ThreadState}"></DataGridTextColumn>

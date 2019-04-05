@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Globalization;
 using System.Management;
 using KMA.ProgrammingInCSharp2019.KonoshenkoLab05.Tools;
 
@@ -11,25 +10,19 @@ namespace KMA.ProgrammingInCSharp2019.KonoshenkoLab05
     {
 
         internal PerformanceCounter RamCounter { get; }
-
         internal PerformanceCounter CpuCounter { get; }
 
         public string Name { get; }
-
         public int Id { get; }
 
         public bool IsActive { get; }
 
         public int CpuTaken { get; set; }
-
         public double RamTaken { get; set; }
-
         public double RamTakenPercent { get; set; }
 
         public int ThreadsNumber { get; set; }
-
         public string Username { get; }
-
         public string FilePath{ get; }
 
         public string RunOn { get; }

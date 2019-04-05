@@ -7,9 +7,15 @@
         mc:Ignorable="d"
         d:DesignHeight="550" d:DesignWidth="1380" x:ClassModifier="internal" IsEnabled="{Binding IsControlEnabled , Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
     <Grid>
+        <Grid.Background>
+            <RadialGradientBrush GradientOrigin="0.5,0.5">
+                <GradientStop Color="Blue" Offset="0" />
+                <GradientStop Color="Gainsboro" Offset="1" />
+            </RadialGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.09*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"></ColumnDefinition>
@@ -17,7 +23,7 @@
             <ColumnDefinition Width="5"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <DataGrid Grid.Row="0" SelectionMode="Single" SelectedItem="{Binding SelectedProcess}" Grid.Column="1" Name="ProcessesDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding Processes, Mode=OneWay}">
+        <DataGrid Grid.Row="0" SelectionMode="Single" Background="Gainsboro" SelectedItem="{Binding SelectedProcess}" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding Processes, Mode=OneWay}">
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Get Info" Command="{Binding GetInfoCommand}"/>
@@ -38,6 +44,6 @@
             </DataGrid.Columns>
         </DataGrid>
         <fa:ImageAwesome Grid.Row="0" Grid.Column="1" Icon="Refresh" Width="150" Height="150" Spin="True" Visibility="{Binding LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></fa:ImageAwesome>
-        <Button Grid.Row="1" Grid.Column="1" Content="EndTask" Margin="2" IsEnabled="{Binding IsItemSelected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Command="{Binding EndTaskCommand}"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="EndTask" Margin="455,5" IsEnabled="{Binding IsItemSelected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Command="{Binding EndTaskCommand}"></Button>
     </Grid>
 </UserControl>

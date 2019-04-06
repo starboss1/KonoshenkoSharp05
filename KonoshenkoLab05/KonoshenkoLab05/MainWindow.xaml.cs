@@ -12,6 +12,7 @@ namespace KMA.ProgrammingInCSharp2019.KonoshenkoLab05
 
         public MainWindow()
         {
+            MessageBox.Show("Use right click to check modules and threads of proccess");
             InitializeComponent();
             ShowProcessesListView();
         }
